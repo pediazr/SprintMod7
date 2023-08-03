@@ -14,6 +14,7 @@ import java.util.List;
 @Mapper(componentModel = "spring", uses = {PedidoMapper.class, PlatoMapper.class})
 public interface DetallePedidoMapper {
     @Mappings({
+
             @Mapping(source ="pedido", target ="pedido"),
             @Mapping(source ="plato", target ="plato"),
             @Mapping(source ="cantidad", target ="cantidad"),

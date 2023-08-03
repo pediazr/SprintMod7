@@ -41,4 +41,9 @@ public class PedidoServiceImpl implements PedidoService {
         }
         return Optional.of(new PedidoDTO());
     }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
 }

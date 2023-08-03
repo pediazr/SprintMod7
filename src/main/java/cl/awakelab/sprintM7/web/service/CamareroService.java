@@ -11,4 +11,5 @@ public interface CamareroService {
     Optional<CamareroDTO> findById(int id);
     Optional<CamareroDTO> create(CamareroDTO camareroDTO);
     Optional<CamareroDTO> update(CamareroDTO camareroDTO);
+    boolean delete(int id);
 }

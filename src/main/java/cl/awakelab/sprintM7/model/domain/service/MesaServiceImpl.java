@@ -42,4 +42,9 @@ public class MesaServiceImpl implements MesaService {
         }
         return Optional.of(new MesaDTO());
     }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
 }

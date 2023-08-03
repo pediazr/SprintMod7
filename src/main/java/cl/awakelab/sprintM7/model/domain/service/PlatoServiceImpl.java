@@ -41,4 +41,9 @@ private final PlatoMapper mapper;
             return Optional.of(mapper.toPlato(repository.save(mapper.toPlatoDTO(platoDTO))));        }
         return Optional.of(new PlatoDTO());
     }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
 }

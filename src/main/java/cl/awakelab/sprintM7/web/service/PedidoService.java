@@ -11,4 +11,5 @@ public interface PedidoService {
     Optional<PedidoDTO> findById(int id);
     Optional<PedidoDTO> create(PedidoDTO pedidoDTO);
     Optional<PedidoDTO> update(PedidoDTO pedidoDTO);
+    boolean delete(int id);
 }

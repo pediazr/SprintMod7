@@ -11,4 +11,5 @@ public interface PlatoService {
     Optional<PlatoDTO> findById(int id);
     Optional<PlatoDTO> create(PlatoDTO platoDTO);
     Optional<PlatoDTO> update(PlatoDTO platoDTO);
+    boolean delete(int id);
 }

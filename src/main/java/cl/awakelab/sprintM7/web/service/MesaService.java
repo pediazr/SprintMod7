@@ -11,4 +11,5 @@ public interface MesaService {
     Optional<MesaDTO> findById(int id);
     Optional<MesaDTO> create(MesaDTO mesaDTO);
     Optional<MesaDTO> update(MesaDTO mesaDTO);
+    boolean delete(int id);
 }

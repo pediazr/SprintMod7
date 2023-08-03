@@ -42,4 +42,9 @@ public class CamareroServiceImpl implements CamareroService {
         }
         return Optional.of(new CamareroDTO());
     }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
 }

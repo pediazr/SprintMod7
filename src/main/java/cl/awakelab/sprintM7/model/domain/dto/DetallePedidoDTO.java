@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DetallePedidoDTO {
+
     private PedidoDTO pedidoDTO;
     private PlatoDTO platoDTO;
     private int cantidad;
