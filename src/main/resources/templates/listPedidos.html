@@ -35,8 +35,8 @@
                 <td th:text="${pedido.getMesaDTO.getNumero()}"></td>
                 <td th:text="${pedido.getCamareroDTO().getNombre()}"></td>
                 <td th:text="${#dates.format(pedido.getFecha(), 'dd-MM-yyyy')}"></td>
-
                 <td th:text="${pedido.getTotal()}"></td>
+                <td><a class="fa-solid fa-pen-to-square" th:href="@{/pedido/u/{Id}(Id=${pedido.getId()})}"></a></td>
                </tr>
         </th:each>
         </tbody>
