@@ -21,10 +21,10 @@ public interface DetallePedidoMapper {
 
 
     })
-    DetallePedido toDetallePedido(DetallePedidoDTO detallePedidoDTO);
-    List<DetallePedido> toDetallePedido(List<DetallePedidoDTO> detallePedidoDTO);
+    DetallePedidoDTO toDetallePedido(DetallePedido detallePedido);
+    List<DetallePedidoDTO> toDetallePedidos(List<DetallePedido> detallePedido);
     @InheritInverseConfiguration
-    DetallePedidoDTO toDetallePedidoDTO(DetallePedido detallePedido);
+    DetallePedido toDetallePedidoDTO(DetallePedidoDTO detallePedidoDTO);
 
 
 

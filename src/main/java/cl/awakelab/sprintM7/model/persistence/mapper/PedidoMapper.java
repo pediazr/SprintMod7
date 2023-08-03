@@ -22,10 +22,10 @@ public interface PedidoMapper {
 
 
     })
-    Pedido toPedido(PedidoDTO pedidoDTO);
-    List<Pedido> toPedido(List<PedidoDTO> pedidoDTO);
+    PedidoDTO toPedido(Pedido pedido);
+    List<PedidoDTO> toPedidos(List<Pedido> pedido);
     @InheritInverseConfiguration
-    PedidoDTO toPedidoDTO(Pedido pedido);
+    Pedido toPedidoDTO(PedidoDTO pedidoDTO);
 
 
 

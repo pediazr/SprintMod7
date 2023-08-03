@@ -21,10 +21,10 @@ public interface MesaMapper {
 
 
     })
-    Mesa toMesa(MesaDTO mesaDTO);
-    List<Mesa> toMesa(List<MesaDTO> mesaDTO);
+    MesaDTO toMesa(Mesa mesa);
+    List<MesaDTO> toMesa(List<Mesa> mesa);
     @InheritInverseConfiguration
-    MesaDTO toMesaDTO(Mesa mesa);
+    Mesa toMesaDTO(MesaDTO mesaDTO);
 
 
 

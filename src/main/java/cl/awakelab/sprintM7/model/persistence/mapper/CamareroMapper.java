@@ -19,10 +19,10 @@ public interface CamareroMapper {
 
 
     })
-    Camarero toCamarero(CamareroDTO camareroDTO);
-    List<Camarero> toCamarero(List<CamareroDTO> camareroDTO);
+    CamareroDTO toCamarero(Camarero camarero);
+    List<CamareroDTO> toCamareros(List<Camarero> camarero);
     @InheritInverseConfiguration
-    CamareroDTO toCamareroDTO(Camarero camarero);
+    Camarero toCamareroDTO(CamareroDTO camareroDTO);
 
 
 

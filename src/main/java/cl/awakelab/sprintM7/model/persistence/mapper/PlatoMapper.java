@@ -22,10 +22,10 @@ public interface PlatoMapper {
 
 
     })
-    Plato toPlato(PlatoDTO platoDTO);
-    List<Plato> toPlato(List<PlatoDTO> platoDTO);
+    PlatoDTO toPlato(Plato plato);
+    List<PlatoDTO> toPlatos(List<Plato> plato);
     @InheritInverseConfiguration
-    PlatoDTO toPlatoDTO(Plato plato);
+    Plato toPlatoDTO(PlatoDTO platoDTO);
 
 
 
