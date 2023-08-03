@@ -15,8 +15,8 @@ import java.util.List;
 public interface PedidoMapper {
     @Mappings({
             @Mapping(source ="id", target ="id"),
-            @Mapping(source ="mesa", target ="mesa"),
-            @Mapping(source ="camarero", target ="camarero"),
+            @Mapping(source ="mesa", target ="mesaDTO"),
+            @Mapping(source ="camarero", target ="camareroDTO"),
             @Mapping(source ="fecha", target ="fecha"),
             @Mapping(source ="total", target ="total"),
 

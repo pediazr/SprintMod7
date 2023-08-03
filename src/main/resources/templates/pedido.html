@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido - Pedido</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+
+
+
+
+  <div class="container">
+    <h2 th:if="${op=='c'}">Crear Pedido</h2>
+    <h2 th:if="${op=='u'}">Editar Pedido</h2>
+  </div>
+  <div class="container">
+    <form class="form" method="post"
+          th:action="@{/pedido/{op}(op=${op})}">
+      <div class="row">
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="id">Id:</label>
+            <input th:if="${op=='u'}" class="form-control" type="disabled"
+                   id="id" name="id" th:value="${pedido.getId()}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="id">Id Mesa:</label>
+            <input th:if="${op=='u'}" class="form-control" type="disabled"
+                   id="mesaId" name="mesaId" th:value="${pedido.getMesa().getId()}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="id">Id Camarero:</label>
+            <input th:if="${op=='u'}" class="form-control" type="disabled"
+                   id="camareroId" name="camareroId" th:value="${pedido.getCamarero().getId()}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="date">Fecha:</label>
+              <input th:if="${op=='u'}" class="form-control" type="date"
+                   id="date" name="date"
+                   th:value="${pedido.getFecha()}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="total">Total:</label>
+            <input th:if="${op=='u'}" class="form-control" type="date"
+                   id="total" name="total"
+                   th:value="${pedido.getTotal()}">
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col">
+            <a href="/administrativo" class="btn btn-secondary">Volver</a>
+          </div>
+          <div class="col">
+            <button id = "enviar" name= "enviar" value = "administrativo" type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -15,8 +15,8 @@ import java.util.List;
 public interface DetallePedidoMapper {
     @Mappings({
 
-            @Mapping(source ="pedido", target ="pedido"),
-            @Mapping(source ="plato", target ="plato"),
+            @Mapping(source ="pedido", target ="pedidoDTO"),
+            @Mapping(source ="plato", target ="platoDTO"),
             @Mapping(source ="cantidad", target ="cantidad"),
             @Mapping(source ="subtotal", target ="subtotal"),
 

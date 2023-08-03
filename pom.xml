@@ -70,10 +70,22 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -81,10 +93,10 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<!--                  <exclude>
-                                                         <groupId>org.projectlombok</groupId>
-                                                         <artifactId>lombok</artifactId>
-                                                     </exclude> -->
+						<!--						<exclude>
+                                                    <groupId>org.projectlombok</groupId>
+                                                    <artifactId>lombok</artifactId>
+                                                </exclude> -->
 					</excludes>
 				</configuration>
 			</plugin>
@@ -117,4 +129,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

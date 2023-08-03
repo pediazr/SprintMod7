@@ -24,6 +24,6 @@ public String listCamareros(Model model){
     List<CamareroDTO> camareros = camareroRestController.findAll().getBody();
     System.out.println(camareros);
     model.addAttribute("camareros",camareros);
-    return "listVisitas";
+    return "listCamareros";
 }
 }
