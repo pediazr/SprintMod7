@@ -1,8 +1,6 @@
 package cl.awakelab.sprintM7.model.persistence.mapper;
 
-import cl.awakelab.sprintM7.model.domain.dto.CamareroDTO;
 import cl.awakelab.sprintM7.model.domain.dto.PedidoDTO;
-import cl.awakelab.sprintM7.model.persistence.entity.Camarero;
 import cl.awakelab.sprintM7.model.persistence.entity.Pedido;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

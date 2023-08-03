@@ -13,10 +13,10 @@ public class Pedido {
     @Column(name="ID")
     private int id;
     @ManyToOne
-    @JoinColumn(name="Mesa_Id", insertable = true, updatable = false)
+    @JoinColumn(name="Mesa_Id", insertable = false, updatable = false)
     private Mesa mesa;
     @ManyToOne
-    @JoinColumn(name="Camarero_Id", insertable = true, updatable = false)
+    @JoinColumn(name="Camarero_Id", insertable = false, updatable = false)
     private Camarero camarero;
     @Column(name="Fecha")
     private Date fecha;
