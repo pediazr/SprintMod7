@@ -1,14 +1,16 @@
 package cl.awakelab.sprintM7.web.controller;
 
+import cl.awakelab.sprintM7.model.domain.dto.CamareroDTO;
 import cl.awakelab.sprintM7.model.domain.dto.PedidoDTO;
 import cl.awakelab.sprintM7.web.service.CamareroService;
 import cl.awakelab.sprintM7.web.service.PedidoService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+
+import java.sql.Date;
 import java.util.List;
 
 @Controller
@@ -43,4 +45,17 @@ public String listPedidos(Model model){
         model.addAttribute("op","u");
         return "pedido";
     }
+    @PostMapping("/u")
+    public String saveEditPedido(
+            @ModelAttribute PedidoDTO pedidoDTO, @ModelAttribute CamareroDTO camareroDTO,
+            Model model, HttpServletRequest request){
+        System.out.println(pedidoDTO.getFecha());
+        System.out.println(pedidoDTO.toString());
+        System.out.println(camareroDTO.toString());
+        pedidoDTO.setFecha(Date.valueOf(request.getParameter("fecha")));
+        camareroDTO.setId(pedidoDTO.getCamareroDTO().getId());
+        camareroRestController.update(camareroDTO);
+        pedidoRestController.update(pedidoDTO);
+        return "redirect:/pedido";
+       }
 }
