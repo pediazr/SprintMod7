@@ -1,4 +1,4 @@
-package cl.awakelab.sprintM7.model.persistence.repository;
+package cl.awakelab.sprintM7.model.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

@@ -7,17 +7,16 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="plato")
+@Table(name="pedido")
 public class Pedido {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     private int id;
     @ManyToOne
-    @JoinColumn(name="Mesa_ID", insertable = true, updatable = false)
+    @JoinColumn(name="Mesa_Id", insertable = true, updatable = false)
     private Mesa mesa;
     @ManyToOne
-    @JoinColumn(name="Camarero_ID", insertable = true, updatable = false)
+    @JoinColumn(name="Camarero_Id", insertable = true, updatable = false)
     private Camarero camarero;
     @Column(name="Fecha")
     private Date fecha;

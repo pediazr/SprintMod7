@@ -22,16 +22,19 @@
         <thead class="table-dark pt-4">
         <tr>
             <th>Id</th>
-            <th>Run</th>
-            <th>Nombre</th>
-            <th>Id de Usuario</th>
+            <th>Numero de Mesa</th>
+            <th>Camarero</th>
+            <th>Fecha</th>
+            <th>Total</th>
             <th>Acción</th>
         </tr>
         </thead>
         <tbody>
             <tr th:each ="pedido :${pedidos}">
                 <td th:text="${pedido.getId()}"></td>
-                <td th:text="${pedido.getFecha()}"></td>
+                <td th:text="${pedido.getMesa.getNumero()}"></td>
+                <td th:text="${pedido.getCamarero.getNombre()}"></td>
+
                 <td th:text="${pedido.getTotal()}"></td>
                </tr>
         </th:each>
