@@ -36,4 +36,4 @@ El proyecto se organiza siguiendo una estructura MVC, lo que facilita la separac
 3. Importa el proyecto en tu entorno de desarrollo favorito (por ejemplo, IntelliJ IDEA o Eclipse).
 4. Ejecuta la aplicación utilizando Spring Boot.
 5. Accede a la aplicación en tu navegador web y explora las diferentes funcionalidades.
-6. Loggin admin 'hola1234'
+6. Loggin username= 'admin' password='hola1234'
