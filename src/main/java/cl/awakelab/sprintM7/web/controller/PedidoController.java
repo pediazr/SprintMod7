@@ -1,8 +1,10 @@
 package cl.awakelab.sprintM7.web.controller;
 
 import cl.awakelab.sprintM7.model.domain.dto.CamareroDTO;
+import cl.awakelab.sprintM7.model.domain.dto.MesaDTO;
 import cl.awakelab.sprintM7.model.domain.dto.PedidoDTO;
 import cl.awakelab.sprintM7.web.service.CamareroService;
+import cl.awakelab.sprintM7.web.service.MesaService;
 import cl.awakelab.sprintM7.web.service.PedidoService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
@@ -18,14 +20,18 @@ import java.util.List;
 public class PedidoController {
 private final PedidoService service;
 private final CamareroService camareroService;
+private final MesaService mesaService;
 private final PedidoRestController pedidoRestController;
 private final CamareroRestController camareroRestController;
+private final MesaRestController mesaRestController;
 
-    public PedidoController(PedidoService service, CamareroService camareroService, PedidoRestController pedidoRestController, CamareroRestController camareroRestController) {
+    public PedidoController(PedidoService service, CamareroService camareroService, MesaService mesaService, PedidoRestController pedidoRestController, CamareroRestController camareroRestController, MesaRestController mesaRestController) {
         this.service = service;
         this.camareroService = camareroService;
+        this.mesaService = mesaService;
         this.pedidoRestController = pedidoRestController;
         this.camareroRestController = camareroRestController;
+        this.mesaRestController = mesaRestController;
     }
 
 
@@ -45,15 +51,18 @@ public String listPedidos(Model model){
         model.addAttribute("op","u");
         return "pedido";
     }
-    @PostMapping("/u")
+    @PostMapping("/up")
     public String saveEditPedido(
-            @ModelAttribute PedidoDTO pedidoDTO, @ModelAttribute CamareroDTO camareroDTO,
+            @ModelAttribute PedidoDTO pedidoDTO, @ModelAttribute CamareroDTO camareroDTO, @ModelAttribute MesaDTO mesaDTO,
             Model model, HttpServletRequest request){
+
         System.out.println(pedidoDTO.getFecha());
-        System.out.println(pedidoDTO.toString());
         System.out.println(camareroDTO.toString());
+        System.out.println(Integer.valueOf(request.getParameter("Id")));
         pedidoDTO.setFecha(Date.valueOf(request.getParameter("fecha")));
-        camareroDTO.setId(pedidoDTO.getCamareroDTO().getId());
+        camareroDTO.setId(Integer.valueOf(request.getParameter("Id")));
+        mesaDTO.setId(Integer.valueOf(request.getParameter("Id")));
+        mesaRestController.update(mesaDTO);
         camareroRestController.update(camareroDTO);
         pedidoRestController.update(pedidoDTO);
         return "redirect:/pedido";

@@ -4,7 +4,7 @@ import cl.awakelab.sprintM7.model.domain.dto.CamareroDTO;
 import cl.awakelab.sprintM7.model.domain.dto.MesaDTO;
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name="pedido")

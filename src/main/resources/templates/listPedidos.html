@@ -31,7 +31,7 @@
         </thead>
         <tbody>
             <tr th:each ="pedido :${pedidos}">
-                <td th:text="${pedido.getId()}"></td>
+                <td th:text="${pedido.getId()}" value="Id" id="Id" name="Id"></td>
                 <td th:text="${pedido.getMesaDTO.getNumero()}"></td>
                 <td th:text="${pedido.getCamareroDTO().getNombre()}"></td>
                 <td th:text="${#dates.format(pedido.getFecha(), 'dd-MM-yyyy')}"></td>
