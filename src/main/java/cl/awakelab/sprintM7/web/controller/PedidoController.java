@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/camarero")
+@RequestMapping("/pedido")
 public class PedidoController {
 private final PedidoService service;
 private final PedidoRestController pedidoRestController;
@@ -24,9 +24,9 @@ private final PedidoRestController pedidoRestController;
 
     @GetMapping
 public String listPedidos(Model model){
-    List<PedidoDTO> pedidoDTOS = pedidoRestController.findAll().getBody();
-    System.out.println(pedidoDTOS);
-    model.addAttribute("pedidos",pedidoDTOS);
+    List<PedidoDTO> pedidos = pedidoRestController.findAll().getBody();
+    System.out.println(pedidos);
+    model.addAttribute("pedidos",pedidos);
     return "listPedidos";
 }
 }

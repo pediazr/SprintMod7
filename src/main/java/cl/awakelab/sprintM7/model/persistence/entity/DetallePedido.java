@@ -9,10 +9,10 @@ public class DetallePedido {
     @EmbeddedId
     private DetallePedidoId id;
     @ManyToOne
-    @JoinColumn(name="Pedido_ID", insertable = true, updatable = false)
+    @JoinColumn(name="Pedido_ID", insertable = false, updatable = false)
     private Pedido pedido;
     @ManyToOne
-    @JoinColumn(name="Plato_ID", insertable = true, updatable = false)
+    @JoinColumn(name="Plato_ID", insertable = false, updatable = false)
     private Plato plato;
     @Column(name="Cantidad")
     private int cantidad;

@@ -1,4 +1,4 @@
-package awakelab.g6.grupal.web.security;
+package cl.awakelab.sprintM7.web.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,8 +29,8 @@ public class SecurityConfig {
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http)throws Exception{
     http.authorizeRequests()
-            .requestMatchers("/capacitacion").hasAnyRole("USER","ADMIN")
-            .requestMatchers("/api/cliente").hasRole("ADMIN")
+            .requestMatchers("/pedido/**").hasAnyRole("USER","ADMIN")
+            .requestMatchers("/api/pedido").hasRole("ADMIN")
             .and().httpBasic(Customizer.withDefaults())
             .formLogin().and().logout().logoutUrl("/logout").logoutSuccessUrl("/").invalidateHttpSession(true)
             .deleteCookies("JSESSIONID");

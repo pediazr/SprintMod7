@@ -3,7 +3,7 @@ package cl.awakelab.sprintM7.actividad2.Test;
 import cl.awakelab.sprintM7.actividad2.inter.CalculoDescuento;
 import cl.awakelab.sprintM7.actividad2.model.CalculoCantidad;
 import cl.awakelab.sprintM7.actividad2.model.CalculoCantidadCapacidad;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/camarero")
+@RequestMapping("/api/mesa")
 public class MesaRestController {
     private final MesaService service;
 
